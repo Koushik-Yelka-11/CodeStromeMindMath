@@ -1,4 +1,4 @@
-# Math Operations Visualizer 🎯
+# Mind Math Game 🎯
 
 This project was built during a hackathon as a simple and interactive way to represent basic mathematical operations visually.
 
