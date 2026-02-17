@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Math Mind</title>
+    <link rel="stylesheet" href="game-style.css">
+</head>
+<body>
+    <div class="math-background">
+        <span>+</span>
+        <span>−</span>
+        <span>×</span>
+        <span>÷</span>
+        <span>=</span>
+        <span>π</span>
+        <span>∞</span>
+        <span>∑</span>
+      </div>
+    <div class="container">
+        <header>
+            <h1>Math Mind Game</h1>
+            <p>lets get into the MATH World</p>
+        </header>
+
+        <div class="game-info">
+            <div class="timer">Time: <span id="time">60</span>s</div>
+            <div class="score">Score: <span id="score">0</span></div>
+            <div class="level">Level: <span id="level">1</span></div>
+        </div>
+
+        <div class="progress-container">
+            <div class="progress-bar" id="progress"></div>
+        </div>
+
+        <div class="question-container">
+            <div class="question" id="question">Are you ready ?</div>
+            <input type="number" class="answer-input" id="answer" placeholder="Enter answer" disabled>
+            <div class="feedback" id="feedback"></div>
+        </div>
+
+        <div class="buttons">
+            <button class="btn btn-primary" id="startBtn">Start Quiz</button>
+            <button class="btn btn-secondary" id="submitBtn" disabled>Submit</button>
+            <button class="btn btn-accent" id="nextBtn" disabled>Next Question</button>
+        </div>
+
+        <div class="settings">
+            <h2>Game Settings</h2>
+            <div class="settings-options">
+                <div class="settings-group">
+                    <h3>Difficulty</h3>
+                    <div class="radio-group">
+                        <label class="radio-option">
+                            <input type="radio" name="difficulty" value="easy" checked> Easy
+                        </label>
+                        <label class="radio-option">
+                            <input type="radio" name="difficulty" value="medium"> Medium
+                        </label>
+                        <label class="radio-option">
+                            <input type="radio" name="difficulty" value="hard"> Hard
+                        </label>
+                        <label class="radio-option">
+                            <input type="radio" name="difficulty" value="adaptive"> Adaptive
+                        </label>
+                    </div>
+                </div>
+                <div class="settings-group">
+                    <h3>Operations</h3>
+                    <div class="radio-group">
+                        <label class="radio-option">
+                            <input type="checkbox" name="operations" value="+" checked> Addition
+                        </label>
+                        <label class="radio-option">
+                            <input type="checkbox" name="operations" value="-"> Subtraction
+                        </label>
+                        <label class="radio-option">
+                            <input type="checkbox" name="operations" value="*"> Multiplication
+                        </label>
+                        <label class="radio-option">
+                            <input type="checkbox" name="operations" value="/"> Division
+                        </label>
+                    </div>
+                </div>
+                <div class="settings-group">
+                    <h3>Time Limit</h3>
+                    <div class="radio-group">
+                        <label class="radio-option">
+                            <input type="radio" name="timeLimit" value="30"> 30 seconds
+                        </label>
+                        <label class="radio-option">
+                            <input type="radio" name="timeLimit" value="60" checked> 1 minute
+                        </label>
+                        <label class="radio-option">
+                            <input type="radio" name="timeLimit" value="120"> 2 minutes
+                        </label>
+                        <label class="radio-option">
+                            <input type="radio" name="timeLimit" value="300"> 5 minutes
+                        </label>
+                    </div>
+                </div>
+            </div>
+            <button class="btn btn-primary" id="applySettings">Apply Settings</button>
+        </div>
+
+        <div class="leaderboard" id="leaderboard">
+            <h2>Leaderboard</h2>
+            <table id="scoreTable">
+                <thead>
+                    <tr>
+                        <th>Rank</th>
+                        <th>Player</th>
+                        <th>Score</th>
+                        <th>Level</th>
+                        <th>Date</th>
+                    </tr>
+                </thead>
+                <tbody id="scoreTableBody">
+                     
+                </tbody>
+            </table>
+            <button class="btn btn-secondary" id="retryBtn">Play Again</button>
+        </div>
+
+        <div class="research-notice">
+            <h3>Research Component</h3>
+            <p>The game collects anonymous performance data (scores, response times, difficulty levels) and optional
+            user feedback (star ratings, comments) to analyze learning patterns and improve the educational experience. All data is stored locally (or could be sent to a secure server) for aggregated research on math skill development and adaptive learning efficacy.</p>
+            
+        </div>
+    </div>
+    <script src="game-script.js"></script>
+
+
+</body>
+</html>

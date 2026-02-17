@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Sign Up</title>
+  <style>
+    body {
+      margin: 0;
+      height: 100vh;
+      background: url('bklogin2.jpeg') no-repeat center center/cover;    display: flex;
+      background-size: cover;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      font-family: 'Arial', sans-serif;
+    }
+    .signup-box {
+      background: rgba(166, 163, 163, 0.348);
+      padding: 40px;
+      border-radius: 10px;
+      box-shadow: 0 0 20px cyan;
+      width: 350px;
+      text-align: center;
+      color: #fff;
+    }
+    .signup-box h2 {
+      margin-bottom: 20px;
+      color: cyan;
+    }
+    .input-field {
+      position: relative;
+      margin-bottom: 20px;
+    }
+    
+    .input-field input {
+      width: 100%;
+      padding: 10px 10px 10px 40px;
+      background: transparent;
+      border: none;
+      border-bottom: 2px solid cyan;
+      color: #fff;
+      font-size: 16px;
+    }
+    .input-field input:focus {
+      outline: none;
+      border-bottom-color: #00ffff;
+    }
+    .input-field i {
+      position: absolute;
+      top: 50%;
+      left: 10px;
+      transform: translateY(-50%);
+      color: rgb(12, 21, 21);
+    }
+    .input-field input::placeholder {
+    color: #cececee9; 
+    opacity: 1; 
+  }
+    .signup-btn {
+      width: 100%;
+      padding: 10px;
+      background: transparent;
+      border: 2px solid cyan;
+      color: cyan;
+      font-size: 16px;
+      border-radius: 5px;
+      cursor: pointer;
+      transition: 0.3s;
+    }
+    .signup-btn:hover {
+      background: cyan;
+      color: #000;
+    }
+    .link {
+      margin-top: 15px;
+      font-size: 14px;
+      color: #aaa;
+    }
+    .link a {
+      color: cyan;
+      text-decoration: none;
+    }
+    .link a:hover {
+      text-decoration: underline;
+    }
+  </style>
+</head>
+<body>
+
+<div class="signup-box">
+  <h2>Sign Up</h2>
+  <form id="signupForm">
+    <div class="input-field">
+      <i class="fa fa-user"></i>
+      <input type="text" id="username" placeholder="Username" required>
+    </div>
+    <div class="input-field">
+      <i class="fa fa-envelope"></i>
+      <input type="email" id="email" placeholder="Email" required>
+    </div>
+    <div class="input-field">
+      <i class="fa fa-lock"></i>
+      <input type="password" id="password" placeholder="Password" required>
+    </div>
+    <button type="submit" class="signup-btn">Create Account</button>
+    <div class="link">
+      Already have an account? <a href="index.html">Log in</a>
+    </div>
+  </form>
+</div>
+
+<script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
+<script>
+  document.getElementById('signupForm').addEventListener('submit', function(e) {
+    e.preventDefault();
+    const username = document.getElementById('username').value.trim();
+    const email = document.getElementById('email').value.trim();
+    const password = document.getElementById('password').value.trim();
+
+    if (username && email && password) {
+      alert('Signup Successful! Welcome, ' + username + '!');
+      // Here you can handle sending the data to server
+    } else {
+      alert('Please fill all fields!');
+    }
+  });
+</script>
+
+</body>
+</html>

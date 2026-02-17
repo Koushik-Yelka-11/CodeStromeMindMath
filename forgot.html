@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Forgot Password</title>
+  <link rel="stylesheet" href="forgot-style.css">
+</head>
+<body>
+  <div class="container">
+    <form class="form">
+      <h2>Forgot Password</h2>
+      <p>Please enter your registered email address.</p>
+      <div class="input-group">
+        <i class="icon email-icon"></i>
+        <input type="email" placeholder="Email" required>
+      </div>
+      <div class="buttons">
+        <button type="submit" class="btn">Reset Password</button>
+      </div>
+      <div class="back">
+        <a href="index.html">← Back to Login</a>
+      </div>
+    </form>
+  </div>
+
+  <script >
+    document.querySelector('.form').addEventListener('submit', function(e) {
+  e.preventDefault();
+  alert('Password reset link sent to your email!');
+});
+
+  </script>
+</body>
+</html>
